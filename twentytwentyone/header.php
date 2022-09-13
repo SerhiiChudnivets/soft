@@ -40,32 +40,33 @@
         <div class="row">
             <div class="col-12">
                 <div class="header__wrapper">
-                <div class="header__logo-block">
-					<?php if(pll_current_language()== 'ru'){
-	$lang = 'ru';	
-}?>
-                    <a href="/<?php echo $lang; ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
-                    </a>
-                </div>
-                <div class="for__mobile-menu">
-                <div class="header__burger">
-                <div class="header__burger-item"></div>
-                        <div class="header__burger-item"></div>
-                        <div class="header__burger-item"></div>
-                </div>
+                    <div class="container header__box">
+                    <div class="header__logo-block">
+                        <?php if(pll_current_language()== 'ru'){
+                    $lang = 'ru';	
+                    }?>
+                        <a href="/<?php echo $lang; ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="for__mobile-menu">
+                    <div class="header__burger">
+                    <div class="header__burger-item"></div>
+                            <div class="header__burger-item"></div>
+                            <div class="header__burger-item"></div>
+                    </div>
                 <div class="header__menu-wrapper">
                   <div class="header__menu-head">
                       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/close.svg" alt="" class="header__menu-close">
                   </div>
                     <?php wp_nav_menu( array(
-	'menu'              => 'top', // ID, имя или ярлык меню
-    'theme_location'    => 'top', // ID, имя или ярлык меню
-	'menu_class'        => 'menu', // класс элемента <ul>
-	'menu_id'           => 'header_menu', // id элемента <ul>
-	'container'         => false, // тег контейнера или false, если контейнер не нужен
-	'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-) );
+                        'menu'              => 'top', // ID, имя или ярлык меню
+                        'theme_location'    => 'top', // ID, имя или ярлык меню
+                        'menu_class'        => 'menu', // класс элемента <ul>
+                        'menu_id'           => 'header_menu', // id элемента <ul>
+                        'container'         => false, // тег контейнера или false, если контейнер не нужен
+                        'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                ) );
                     ?>
                     <?php wp_nav_menu( array(
                         'menu'              => 'lang', // ID, имя или ярлык меню
@@ -99,10 +100,12 @@
                 </div>
                 </div>
                 </div>
-            </div>
+
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row header__content">
             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="header__content-wrapper">
                 <div class="header__content">

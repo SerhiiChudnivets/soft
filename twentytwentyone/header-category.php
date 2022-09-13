@@ -39,64 +39,66 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-            <div class="header__wrapper">
-                <div class="header__logo-block">
-                    <a href="/">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
-                    </a>
-                </div>
-                <div class="for__mobile-menu">
-                <div class="header__burger">
-                <div class="header__burger-item"></div>
-                        <div class="header__burger-item"></div>
-                        <div class="header__burger-item"></div>
-                </div>
-                <div class="header__menu-wrapper">
-                  <div class="header__menu-head">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/close.svg" alt="" class="header__menu-close">
-                  </div>
-                    <?php wp_nav_menu( array(
-	'menu'              => 'top', // ID, имя или ярлык меню
-    'theme_location'    => 'top', // ID, имя или ярлык меню
-	'menu_class'        => 'menu', // класс элемента <ul>
-	'menu_id'           => 'header_menu', // id элемента <ul>
-	'container'         => false, // тег контейнера или false, если контейнер не нужен
-	'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-) );
-                    ?>
-                    <?php wp_nav_menu( array(
-                        'menu'              => 'lang', // ID, имя или ярлык меню
-                        'theme_location'   => 'lang', // ID, имя или ярлык меню
-                        'menu_class'        => 'menu__lang', // класс элемента <ul>
-                        'menu_id'           => 'header_lang', // id элемента <ul>
-                        'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    ) );
-                    ?>
-                                     <a href="#" class="header__btn">
-                        <?php echo __('Вакансии', 'softum'); ?>
-                        <img class="header__arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg" alt="">
-                    </a>
-                    <div class="footer__socials">
-                    <?php
-
-                    // Check rows exists.
-                    if( have_rows('mob_socials') ):
-
-                        // Loop through rows.
-                        while( have_rows('mob_socials') ) : the_row();
-
-                            ?>
-                            <a href="<?php echo get_sub_field('link') ?>" class="emails__block-item" target="_blank">
-                                <img src="<?php echo get_sub_field('icon') ?>" class="emails__block-icon">
+                <div class="header__wrapper">
+                    <div class="container header__box">
+                    <div class="header__logo-block">
+                            <a href="/">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
                             </a>
-                        <?php
-                        endwhile;
-                    else :
-                    endif;?>
-                </div>
-                </div>
-                </div>
-            </div>
+                    </div>
+                    <div class="for__mobile-menu">
+                            <div class="header__burger">
+                                <div class="header__burger-item"></div>
+                                <div class="header__burger-item"></div>
+                                <div class="header__burger-item"></div>
+                                </div>
+                            <div class="header__menu-wrapper">
+                            <div class="header__menu-head">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/close.svg" alt="" class="header__menu-close">
+                            </div>
+                                                            <?php wp_nav_menu( array(
+                                            'menu'              => 'top', // ID, имя или ярлык меню
+                                            'theme_location'    => 'top', // ID, имя или ярлык меню
+                                            'menu_class'        => 'menu', // класс элемента <ul>
+                                            'menu_id'           => 'header_menu', // id элемента <ul>
+                                            'container'         => false, // тег контейнера или false, если контейнер не нужен
+                                            'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                        ) );
+                                                            ?>
+                                                            <?php wp_nav_menu( array(
+                                                                'menu'              => 'lang', // ID, имя или ярлык меню
+                                                                'theme_location'   => 'lang', // ID, имя или ярлык меню
+                                                                'menu_class'        => 'menu__lang', // класс элемента <ul>
+                                                                'menu_id'           => 'header_lang', // id элемента <ul>
+                                                                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                                            ) );
+                                                            ?>
+                                                                            <a href="#" class="header__btn">
+                                                                <?php echo __('Вакансии', 'softum'); ?>
+                                                                <img class="header__arrow" src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg" alt="">
+                                                            </a>
+                                                            <div class="footer__socials">
+                                                            <?php
+
+                                                            // Check rows exists.
+                                                            if( have_rows('mob_socials') ):
+
+                                                                // Loop through rows.
+                                                                while( have_rows('mob_socials') ) : the_row();
+
+                                                                    ?>
+                                                                    <a href="<?php echo get_sub_field('link') ?>" class="emails__block-item" target="_blank">
+                                                                        <img src="<?php echo get_sub_field('icon') ?>" class="emails__block-icon">
+                                                                    </a>
+                                                                <?php
+                                                                endwhile;
+                                                            else :
+                                                            endif;?>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

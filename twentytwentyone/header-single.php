@@ -40,15 +40,17 @@
         <div class="row">
             <div class="col-12">
                 <div class="header__wrapper">
+                    <div class="container header__box">
                     <div class="header__logo-block">
                         <a href="/">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
                         </a>
                     </div>
-                    <a href="/" class="header__back">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow_back.svg" class="header__back-img"/>
-                        Назад
-                    </a>
+                        <a href="/#careers" class="header__back">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow_back.svg" class="header__back-img"/>
+                            Назад
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

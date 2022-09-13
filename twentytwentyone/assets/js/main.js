@@ -170,5 +170,31 @@ $(document).ready(function(){
 
     });
     
-            slogan();
+    slogan();
+
+    // HEADER
+
+    if (($(window).scrollTop() > 50)&&!$('.header__wrapper').hasClass('scrolled')) {
+        $('.header__wrapper').addClass('scrolled')
+    } 
+
+    $(window).on('scroll', function (e) {
+        if ($(window).scrollTop() > 50) {
+            $('.header__wrapper').addClass('scrolled')
+        } else {
+            $('.header__wrapper').removeClass('scrolled')
+        }
+    });
+    
+    // btn-up
+    $(".btn-up").on("click",function(e){
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, {
+            duration: 1000,
+            easing: "linear"
+        });
+    })
+
 });
