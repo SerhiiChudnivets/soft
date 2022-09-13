@@ -65,7 +65,7 @@ __SVGATOR_PLAYER__.build({"root":"ek3i1zt6vi91","animations":[{"duration":5000,"
         </div>
     </div>
 </div>
-<div class="careers">
+<div id="careers" class="careers">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -225,28 +225,30 @@ endif;?>
 				</div>
 	
                 <div class="footer__socials">
-                    <?php
+                            <?php
 
-                    // Check rows exists.
-                $field ='';
-					if(pll_current_language() == 'uk'){
-						$field = "global_social_ua";
-													  }else{
-					$field = "global_social_ru";
-					}
-                    if( have_rows($field, "option") ):
+                            // Check rows exists.
+                        $field ='';
+                            if(pll_current_language() == 'uk'){
+                                $field = "global_social_ua";
+                                                            }else{
+                            $field = "global_social_ru";
+                            }
+                            if( have_rows($field, "option") ):
 
-                        // Loop through rows.
-                        while( have_rows($field, "option") ) : the_row();
+                                // Loop through rows.
+                                while( have_rows($field, "option") ) : the_row();
 
-                            ?>
-                            <a href="<?php echo get_sub_field('link') ?>" class="emails__block-item" target="_blank">
-                                <img src="<?php echo get_sub_field('logo') ?>" class="emails__block-icon">
-                            </a>
-                        <?php
-                        endwhile;
-                    else :
-                    endif;?>
+                                    ?>
+                                    <a href="<?php echo get_sub_field('link') ?>" class="emails__block-item" target="_blank">
+                                        <img src="<?php echo get_sub_field('logo') ?>" class="emails__block-icon">
+                                    </a>
+                                <?php
+                                endwhile;
+                            else :
+                            endif;?>
+
+                    <button class="btn-up"> <img class="img-arrow-up"src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-up.png" alt=""></button>
                 </div>
             </div>
         </div>

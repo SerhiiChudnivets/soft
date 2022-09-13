@@ -124,16 +124,18 @@ $category = get_queried_object();
                         // Check rows exists.
 
                             // Loop through rows.
-foreach ($socials as $social) {
-                                ?>
-                                <a href="<?php echo $social['link'] ?>" class="emails__block-item" target="_blank">
-                                    <img src="<?php echo $social['icon']  ?>" class="emails__block-icon">
-                                </a>
-                            <?php
-}
+                            foreach ($socials as $social) {
+                                                            ?>
+                                                            <a href="<?php echo $social['link'] ?>" class="emails__block-item" target="_blank">
+                                                                <img src="<?php echo $social['icon']  ?>" class="emails__block-icon">
+                                                            </a>
+                                                        <?php
+                            }
 
-?>
+                            ?>
+                             
                     </div>
+                   
                 </div>
             </div>
         </div>
