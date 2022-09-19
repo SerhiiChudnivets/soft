@@ -170,5 +170,40 @@ $(document).ready(function(){
 
     });
     
-            slogan();
+    slogan();
+
+    // HEADER
+
+    if (($(window).scrollTop() > 50)&&!$('.header__wrapper').hasClass('scrolled')) {
+        $('.header__wrapper').addClass('scrolled')
+    } 
+    $(".btn-up").hide(300);
+
+    $(window).on('scroll', function (e) {
+        if ($(window).scrollTop() > 50) {
+            $('.header__wrapper').addClass('scrolled')
+        } else {
+            $('.header__wrapper').removeClass('scrolled')
+        }
+        if ($(window).scrollTop() > $('.header').height()+50){
+            $(".btn-up").show(300)
+        }
+        else {
+            $(".btn-up").hide(300)
+        }
+    });
+
+  
+    
+    // btn-up
+    $(".btn-up").on("click",function(e){
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, {
+            duration: 1000,
+            easing: "linear"
+        });
+    })
+
 });

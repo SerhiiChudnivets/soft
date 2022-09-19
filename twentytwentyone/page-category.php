@@ -18,10 +18,8 @@
 
             <?php $cats = get_categories();
             foreach ($cats as $cat){
-                $link = get_category_link($cat->cat_ID);
-              ?>
-                <a href="<?php echo $link ?>" class="cat_item"><?php echo $cat->name ?>  <span class="cat__item-count"><?php echo $cat->category_count?></span></a>
-                    <?php
+                $link = get_category_link($cat->cat_ID);?>
+                <a href="<?php echo $link ?>" class="cat_item"><?php echo $cat->name ?>  <span class="cat__item-count"><?php echo $cat->category_count?></span></a><?php
             }
             ?>
             </div>
