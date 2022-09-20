@@ -183,6 +183,8 @@ endif;?>
                         endwhile;
                     else :
                     endif;?>
+
+                        <button class="btn-up"> <img class="img-arrow-up"src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-up.png" alt=""></button>
                 </div>
                 </div>
             </div>
